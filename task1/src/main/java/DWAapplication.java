@@ -87,15 +87,14 @@ public class DWAapplication {
             List<JoinCountry> joinCountry = objectMapper.readValue(result, new TypeReference<List<JoinCountry>>(){});
 
             for (JoinCountry joinCountry1 : joinCountry) {
-                System.out.println(joinCountry1.getCountryName()+" ");
-                System.out.println(joinCountry1.getCountryCode()+" ");
+
                 List<JoinCountry.Participations> list = joinCountry1.getParticipations();
                 if (list != null) {
                     for (JoinCountry.Participations p : list) {
-                        players.add();
+                        players.add(p);
                     }
                 }
-                System.out.println("\n");
+
             }
 
 
