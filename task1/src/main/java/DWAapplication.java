@@ -121,7 +121,12 @@ public class DWAapplication {
                 }
             }
             else {
+                if (line.length()<7) {
 
+                    fw.write("Error\n");
+                    fw.write("------------------\n");
+                    continue;
+                }
                 String s1=line.substring(0,7);
                 if (!s1.equals("result ")){
                     fw.write("Error\n");
@@ -141,7 +146,7 @@ public class DWAapplication {
 
                                 fw.write("Full Name:"+player.getFullName()+"\n");
                                 fw.write("Rank:"+player.getRank()+"\n");
-                                fw.write("Score"+player.getScore()+"\n");
+                                fw.write("Score:"+player.getScore()+"\n");
                                 fw.write("------------------\n");
 
                             }
